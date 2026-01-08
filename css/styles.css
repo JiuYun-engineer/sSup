@@ -727,3 +727,54 @@ body.about-page .bubble-top:after{
   border-width: 12px;
   border-top-color:#333;
 }
+
+/* =========================
+   About - Slide 2 only (motto + filmstrip)
+   Fix slight bottom clipping while keeping slide (no scroll)
+   ========================= */
+
+/* (선택) about 페이지에서만 뷰포트 조금 더 확보 */
+.about-page .deck-viewport{
+  height: calc(100vh - 170px); /* 기존 190px → 170px로 20px 여유 */
+}
+
+/* about.html에서 slide2는 두 번째 article.slide */
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2){
+  padding-top: 10px; /* 기존 slide padding-top 26px보다 더 타이트하게 */
+}
+
+/* 큰 슬로건(3줄) 전체 크기 다운 */
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .motto{
+  padding-top: 18px; /* 기존 40px ↓ */
+}
+
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .motto .line{
+  font-size: clamp(34px, 3.1vw, 46px); /* 기존 52px ↓ + 화면에 따라 자동 */
+  margin: 10px 0;                      /* 기존 18px ↓ */
+  line-height: 1.05;
+}
+
+/* 필름스트립도 살짝 압축 */
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .filmstrip{
+  margin-top: 22px;     /* 기존 44px ↓ */
+  padding: 12px 0;      /* 기존 18px ↓ */
+  border-top: 8px solid #111;   /* 기존 10px ↓ */
+  border-bottom: 8px solid #111;/* 기존 10px ↓ */
+}
+
+/* 스프로킷 줄 두께/여백 조금 다운 */
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .filmstrip:before,
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .filmstrip:after{
+  height: 8px; /* 기존 10px ↓ */
+}
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .filmstrip:before{ margin-bottom: 8px; }
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .filmstrip:after{ margin-top: 8px; }
+
+/* 내부 간격/이미지 높이 다운 */
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .filmstrip-inner{
+  gap: 18px; /* 기존 28px ↓ */
+}
+
+.about-page .deck[data-key="deck:about"] .deck-viewport > .slide:nth-child(2) .film-img{
+  height: 180px; /* 기존 210px ↓ */
+}
