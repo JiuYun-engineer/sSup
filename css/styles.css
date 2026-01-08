@@ -696,3 +696,21 @@ body.about-page .slide-inner{
 body.about-page .slide-inner{
   margin-top: -12px;
 }
+
+/* ===== About: speech bubble border refine (thin & clean) ===== */
+body.about-page .speech-big{
+  border-width: 3px;        /* ⬅ 핵심: 기존 5~8px → 3px */
+  padding: 14px 16px;       /* 테두리 얇아졌으니 여백도 같이 줄임 */
+  font-size: 18px;          /* 이미 맞춰둔 값 유지 */
+}
+
+/* 꼬리(삼각형)도 같이 얇게 */
+body.about-page .speech-big:after{
+  border-width: 10px;       /* 외곽 */
+  bottom: -14px;
+}
+
+body.about-page .speech-big:before{
+  border-width: 8px;        /* 안쪽(흰색) */
+  bottom: -11px;
+}
