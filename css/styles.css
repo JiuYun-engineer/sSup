@@ -678,21 +678,28 @@ body.about-page img{
   object-fit: contain;
 }
 
-/* ===== FIX: About 페이지는 슬라이드 고정(overflow hidden) 해제하고 자연 스크롤 ===== */
-body.about-page .deck-viewport{
-  height: auto !important;
-  min-height: 0 !important;
-  overflow: visible !important;
+/* ===== Keep slide navigation, only fix sizing for About ===== */
+
+/* 덱 뷰포트가 너무 낮아서 잘리는 게 핵심 → 높이 늘리기 */
+.deck-viewport{
+  height: calc(100vh - 120px);  /* 기존 190px였으면 너무 작음 */
+  overflow: hidden;
 }
 
-body.about-page .slide{
-  position: relative !important;
-  inset: auto !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  transform: none !important;
+/* 상단 바 높이가 실제로 더 작다면 여기 값을 더 줄일수록(=120→100) 뷰포트가 커짐 */
+@media (max-width: 920px){
+  .deck-viewport{
+    height: calc(100vh - 96px);
+  }
 }
 
-body.about-page .deck-controls{
-  display: none !important; /* About에서는 prev/next 점 숨김 (원하면 나중에 fixed로 다시 만들 수 있음) */
+/* About 슬라이드에서만 전체를 살짝 축소해서 한 화면에 다 들어오게 */
+body.about-page .slide-inner{
+  transform: scale(0.88);
+  transform-origin: top center;
+}
+
+/* 축소하면 아래 공간이 남는 느낌이 들어서 약간 위로 올림 */
+body.about-page .slide-inner{
+  margin-top: -12px;
 }
