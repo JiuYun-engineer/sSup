@@ -69,8 +69,15 @@ img{max-width:100%; display:block}
 .topbar-row{
   display:flex;
   align-items:center;
-  justify-content:space-between;
   gap:20px;
+}
+
+.since{
+  margin-right:auto;   /* ✅ HOME(왼쪽) 고정 */
+}
+
+.nav-pills{
+  margin-left:auto;    /* ✅ 버튼들 오른쪽 정렬 */
 }
 .since{
   font-size:22px;
@@ -133,11 +140,16 @@ img{max-width:100%; display:block}
 }
 
 .banner{
-  margin-top:28px;      /* 위 여백 줄임 */
-  padding:14px 0;       /* 배너 두께 줄임 */
+  margin-top:36px;
+  padding:22px 0;
+  background:#f7ebc3;              /* ✅ 노란 띠 확실히 */
+  border-top:1px solid rgba(0,0,0,.15);
+  border-bottom:1px solid rgba(0,0,0,.15);
 }
+
 .banner .quote{
-  font-size:48px;       /* 첫 번째 스샷이랑 거의 동일 */
+  font-size:50px;
+  text-align:center;
 }
 
 /* =========================
