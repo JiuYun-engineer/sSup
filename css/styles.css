@@ -677,3 +677,22 @@ body.about-page img{
   height: auto;
   object-fit: contain;
 }
+
+/* ===== FIX: About 페이지는 슬라이드 고정(overflow hidden) 해제하고 자연 스크롤 ===== */
+body.about-page .deck-viewport{
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+body.about-page .slide{
+  position: relative !important;
+  inset: auto !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+}
+
+body.about-page .deck-controls{
+  display: none !important; /* About에서는 prev/next 점 숨김 (원하면 나중에 fixed로 다시 만들 수 있음) */
+}
