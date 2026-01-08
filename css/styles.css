@@ -107,7 +107,7 @@ img{max-width:100%; display:block}
    Index hero
    ========================= */
 .hero{
-  padding:70px 0 0;
+  padding:40px 0 0;
 }
 .hero-grid{
   display:grid;
@@ -122,7 +122,7 @@ img{max-width:100%; display:block}
   letter-spacing:.01em;
 }
 .hero-card{
-  width:520px;
+  width:360px;          /* 🔥 핵심: 카드 크기 줄이기 */
   margin-left:auto;
 }
 .hero-card img{
@@ -132,16 +132,12 @@ img{max-width:100%; display:block}
   background:#fff;
 }
 
-/* bottom banner */
 .banner{
-  margin-top:70px;
-  background:var(--banner);
-  padding:34px 0;
+  margin-top:28px;      /* 위 여백 줄임 */
+  padding:14px 0;       /* 배너 두께 줄임 */
 }
 .banner .quote{
-  font-size:72px;
-  text-align:center;
-  letter-spacing:.01em;
+  font-size:48px;       /* 첫 번째 스샷이랑 거의 동일 */
 }
 
 /* =========================
@@ -612,7 +608,7 @@ img{max-width:100%; display:block}
 @media (max-width: 1100px){
   .container{width:min(var(--maxw), calc(100% - 48px))}
   .pill{min-width:220px; font-size:22px; height:52px}
-  .hero-title{font-size:84px}
+  .hero-title{font-size:78px;/* 🔥 PDF 느낌 크기 */}
   .banner .quote{font-size:48px}
   .hero-grid{grid-template-columns: 1fr}
   .hero-card{margin:0}
