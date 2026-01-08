@@ -714,3 +714,16 @@ body.about-page .speech-big:before{
   border-width: 8px;        /* 안쪽(흰색) */
   bottom: -11px;
 }
+
+/* 오른쪽 위 말풍선(bubble-top) 테두리 얇게 */
+body.about-page .bubble-top{
+  border-width: 4px;
+  padding: 14px 18px;
+  font-size: 20px;
+}
+
+body.about-page .bubble-top:after{
+  bottom:-16px;
+  border-width: 12px;
+  border-top-color:#333;
+}
