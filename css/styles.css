@@ -275,28 +275,21 @@ img{max-width:100%; display:block}
   position:relative;
   background:#fff;
   border-radius:18px;
-  border:8px solid #222;
-  padding:30px 30px;
-  font-size:26px;
-  line-height:1.35;
-  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+  border:6px solid #222;
+  padding:20px 22px;
+  font-size:20px;
+  line-height:1.32;
 }
 .speech-big:after{
-  content:"";
-  position:absolute;
-  right:70px;
-  bottom:-30px;
-  width:0;height:0;
-  border:22px solid transparent;
+  /* 기존: bottom -30px / border 22px */
+  bottom:-22px;
+  border:16px solid transparent;
   border-top-color:#222;
 }
 .speech-big:before{
-  content:"";
-  position:absolute;
-  right:74px;
-  bottom:-22px;
-  width:0;height:0;
-  border:18px solid transparent;
+  /* 기존: bottom -22px / border 18px */
+  bottom:-16px;
+  border:13px solid transparent;
   border-top-color:#fff;
 }
 .doc-card{
