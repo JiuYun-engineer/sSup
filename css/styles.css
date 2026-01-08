@@ -87,8 +87,10 @@ img{max-width:100%; display:block}
   display:flex;
   gap:var(--nav-gap);
   align-items:center;
-  justify-content:center;
-  flex:1;
+  justify-content:flex-end;  /* ✅ 오른쪽으로 붙임 */
+  flex:0;                    /* ✅ 가운데 넓게 먹는거 제거 */
+  width:auto;
+  margin-left:auto;          /* ✅ 오른쪽 끝으로 밀기 */
 }
 .pill{
   display:inline-flex;
