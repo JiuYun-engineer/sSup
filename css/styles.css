@@ -634,59 +634,46 @@ img{max-width:100%; display:block}
   /* On small screens, allow natural scroll inside page */
 }
 
-/* ===== FIX: About(및 모든 페이지) 잘림 방지 ===== */
+/* ===== About Us 잘림 FIX (About만 스크롤 허용) ===== */
 
-/* 페이지가 길어지면 스크롤이 생기도록 */
-html, body{
-  height: auto !important;
-  min-height: 100% !important;
-  overflow-x: hidden !important;
+/* 1) About 페이지에서만 화면 고정/잘림을 풀기 */
+body.about-page{
   overflow-y: auto !important;
 }
 
-/* main/섹션이 100vh로 고정되거나 hidden이면 풀어버리기 */
-main{
+/* 2) About 페이지 wrapper/viewport가 100vh + hidden이면 풀기 */
+body.about-page .page,
+body.about-page .stage,
+body.about-page .screen,
+body.about-page .viewport,
+body.about-page .wrapper{
   height: auto !important;
   min-height: 100vh !important;
   overflow: visible !important;
 }
 
-/* 내가 만든 코드에서 화면을 잡아먹는 “페이지/스테이지/슬라이드” 계열이 있을 수 있어서 같이 해제 */
-.page,
-.stage,
-.slide,
-.screen,
-.viewport,
-.carousel,
-.wrapper{
+/* 3) About 메인 레이아웃도 아래로 늘어나게 */
+body.about-page .about-container,
+body.about-page .about-grid,
+body.about-page .about-row{
   height: auto !important;
-  min-height: 0 !important;
   overflow: visible !important;
-}
-
-/* About 레이아웃이 flex일 때, 내용이 길어도 아래로 늘어나게 */
-.about-container,
-.about-grid,
-.about-row{
   align-items: flex-start !important;
-  height: auto !important;
-  overflow: visible !important;
 }
 
-/* 왼쪽 텍스트 카드가 내부에서 잘리는 경우 대비 */
-.about-left,
-.about-card,
-.text-card{
+/* 4) 카드/오른쪽 이미지가 내부에서 잘리는 경우까지 방지 */
+body.about-page .about-left,
+body.about-page .about-right,
+body.about-page .about-card,
+body.about-page .proof-wrap,
+body.about-page .reg-wrap{
   height: auto !important;
   max-height: none !important;
   overflow: visible !important;
 }
 
-/* 오른쪽(말풍선/이미지)도 아래로 늘어나게 */
-.about-right,
-.about-proof,
-.proof-wrap{
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
+body.about-page img{
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
