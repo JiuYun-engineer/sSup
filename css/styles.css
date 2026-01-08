@@ -96,15 +96,17 @@ img{max-width:100%; display:block}
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-width:320px;
-  height:58px;
-  padding:0 32px;
+
+  min-width:260px;     /* ✅ 가로 폭 축소 */
+  height:46px;         /* ✅ 높이 줄이기 (중요) */
+  padding:0 22px;      /* ✅ 내부 여백 축소 */
+
   border:2px solid var(--pill-border);
   border-radius:999px;
   background:var(--pill-bg);
-  font-size:28px;
+
+  font-size:22px;      /* ✅ 글자 크기 다운 */
   line-height:1;
-  transition:transform .12s ease, box-shadow .12s ease;
 }
 .pill:hover{transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,.12)}
 .pill.active{
