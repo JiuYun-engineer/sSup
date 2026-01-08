@@ -2,80 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>sSUp MRI</title>
 
-  <!-- Serif font like PDF -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Commercial-safe (SIL OFL) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,700;1,800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="container">
+      <div class="topbar-row">
+        <div class="since">SINCE AUGUST 2025</div>
 
-<header class="nav">
-  <div class="logo">sSUp</div>
-  <nav>
-    <a href="#about">About Us</a>
-    <a href="#process">Development Process</a>
-    <a href="#more">More Info</a>
-  </nav>
-</header>
+        <nav class="nav-pills" aria-label="Primary">
+          <a class="pill" data-pill="about" href="about.html">About Us</a>
+          <a class="pill" data-pill="dev" href="development.html">Development Process</a>
+          <a class="pill" data-pill="more" href="more.html">More Info</a>
+        </nav>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1><span class="hl">sSUp</span> MRI</h1>
-    <p>
-      A <span class="hl">low-cost MRI</span> solution<br>
-      designed for <span class="hl">accessibility</span> and care.
-    </p>
-  </div>
+        <div style="width:240px"></div>
+      </div>
+    </div>
+  </header>
 
-  <img src="assets/hero-card.png" class="hero-img">
-</section>
+  <main class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-title">sSUp MRI</div>
+        </div>
 
-<section id="about" class="section">
-  <h2>About Us</h2>
+        <div class="hero-card">
+          <!-- PDF 오른쪽 카드 -->
+          <img src="assets/hero/hero-card.png" alt="sSUp MRI card" />
+        </div>
+      </div>
+    </div>
 
-  <div class="about-grid">
-    <img src="assets/about-1.png">
-    <img src="assets/about-2.png">
-  </div>
+    <section class="banner" aria-label="Quote banner">
+      <div class="container">
+        <div class="quote">No tomorrow. Today might be the last day!</div>
+      </div>
+    </section>
+  </main>
 
-  <div class="team">
-    <div class="member"><img src="assets/ceo.jpg"><span>CEO</span></div>
-    <div class="member"><img src="assets/cpo.jpg"><span>CPO</span></div>
-    <div class="member"><img src="assets/coo.jpg"><span>COO</span></div>
-    <div class="member"><img src="assets/cto.jpg"><span>CTO</span></div>
-    <div class="member"><img src="assets/cio.jpg"><span>CIO</span></div>
-  </div>
-</section>
-
-<section id="process" class="section gray">
-  <h2>Development Process</h2>
-
-  <div class="process-grid">
-    <img src="assets/process-1.png">
-    <img src="assets/process-2.png">
-    <img src="assets/process-3.png">
-    <img src="assets/process-4.png">
-  </div>
-</section>
-
-<section id="more" class="section">
-  <h2>Support & Contact</h2>
-
-  <div class="support">
-    <img src="assets/support-heart.png">
-    <p>
-      Supporting innovation<br>
-      for a <span class="hl">better medical future</span>.
-    </p>
-  </div>
-</section>
-
-<footer>
-  © 2026 sSUp MRI Project
-</footer>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
