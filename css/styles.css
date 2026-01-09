@@ -688,7 +688,7 @@ body.about-page img{
 
 /* 상단 바 높이가 실제로 더 작다면 여기 값을 더 줄일수록(=120→100) 뷰포트가 커짐 */
 @media (max-width: 920px){
-  .deck-viewport{
+  body.about-page .deck-viewport{
     height: calc(100vh - 96px);
   }
 }
@@ -809,4 +809,20 @@ body.about-page .bubble-top:after{
 /* bullet 하나하나 간격 */
 .team-info ul li {
   margin-bottom: 6px;
+}
+
+/* ===== Development: screenshot slides (PDF 캡쳐 그대로 보여주기) ===== */
+.dev-page .slide{
+  padding: 18px 0 0; /* 기본 26px보다 살짝 줄여서 공간 확보 */
+}
+
+.dev-page .pdf-shot{
+  width: min(1200px, 96%);
+  height: calc(100vh - 260px);  /* 헤더/타이틀/컨트롤 감안 */
+  margin: 14px auto 0;
+  display: block;
+
+  object-fit: contain;  /* ✅ 안 잘리게 */
+  background: #fff;
+  box-shadow: var(--shadow);
 }
