@@ -353,32 +353,38 @@ img{max-width:100%; display:block}
 .filmstrip:after{margin-top:12px}
 
 /* profiles */
+/* profiles — FIXED (텍스트 축소) */
 .profile{
   display:grid;
   grid-template-columns: 440px 1fr;
-  gap:56px;
+  gap:40px;                 /* 기존 56px ↓ */
   align-items:center;
-  padding-top:14px;
+  padding-top:8px;
 }
+
 .profile .name{
-  font-size:52px;
+  font-size:36px;           /* 52px → 36px */
   font-style:italic;
-  margin:0 0 12px;
+  margin:0 0 6px;
 }
+
 .profile .role{
-  font-size:92px;
+  font-size:56px;           /* 92px → 56px 🔥 */
   font-weight:800;
   letter-spacing:.01em;
   color:#1e2234;
-  margin:0 0 12px;
+  margin:0 0 10px;
 }
+
 .profile .bullets{
-  font-size:28px;
-  line-height:1.45;
+  font-size:16px;           /* 28px → 16px 🔥 */
+  line-height:1.35;
   color:#222;
+  padding-left:22px;
 }
+
 .profile .bullets li{
-  margin:6px 0;
+  margin:4px 0;
 }
 .profile .photo{
   width:440px;
